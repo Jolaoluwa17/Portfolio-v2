@@ -1,0 +1,63 @@
+.project_details_backBtn {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  z-index: 2;
+}
+.backBtn {
+  display: flex;
+  align-items: center;
+  padding: 12px 17px;
+  border: #e74fd5 1px solid;
+  width: 90px;
+  justify-content: space-between;
+  border-radius: 10px;
+  color: #e74fd5;
+  background-color: white;
+}
+.backBtn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: black 1px solid;
+}
+.project_content {
+  padding: 70px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project_details_root .project_name {
+  text-align: center;
+  margin-top: 30px;
+}
+.project_details_root .project_name h1 {
+  font-weight: 600;
+  font-size: 80px;
+}
+.project_details_root .project_name h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: normal;
+}
+.project_pic_overview {
+  width: 100%;
+  height: 600px;
+  margin-top: 40px;
+}
+.project_overview {
+  margin-top: 40px;
+}
+.project_highlights {
+  margin-top: 40px;
+  width: 100%;
+}
+.project_issues {
+  margin-top: 40px;
+  width: 100%;
+
+}

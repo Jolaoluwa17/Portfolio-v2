@@ -1,0 +1,22 @@
+.projectPicOverview_root {
+  width: 100%;
+  height: 600px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, #e74fd5 0px 2px 6px 2px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.projectPicOverview_root .mobile_view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.projectPicOverview_root .web_view {
+  width: 100%;
+  height: 100%;
+}
+
+.test {
+  width: auto !important;
+}

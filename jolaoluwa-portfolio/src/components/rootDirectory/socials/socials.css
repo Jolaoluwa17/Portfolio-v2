@@ -1,0 +1,105 @@
+.icon-root {
+  height: 100vh;
+  /* background-color: red; */
+  justify-content: center;
+  display: flex;
+}
+.icon-content {
+  width: 10%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.icon {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.icon:hover {
+  cursor: pointer;
+}
+.line-top {
+  margin-bottom: 40px;
+  height: 100px;
+  width: 2px;
+  background-color: black;
+}
+.line-bottom {
+  margin-top: 40px;
+  height: 100px;
+  width: 2px;
+  background-color: black;
+}
+
+.iconBtn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.github {
+  background: #181818;
+}
+.linkedIn {
+  background: #0a66c2;
+}
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+.twitter {
+  background: #1da1f2;
+}
+
+.iconBtn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.iconBtn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}

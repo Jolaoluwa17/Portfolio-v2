@@ -1,0 +1,23 @@
+.overview_root {
+  display: flex;
+  width: 100%;
+}
+.overview_root .left,
+.overview_root .right {
+  width: 50%;
+  padding: 20px;
+}
+.project_overview_header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.overview_root .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.overview_root ul li {
+  list-style: none;
+  margin-top: 5px;
+}

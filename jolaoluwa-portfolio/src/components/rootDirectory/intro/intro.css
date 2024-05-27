@@ -1,0 +1,28 @@
+.intro_root {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 450px;
+  /* background-color: green; */
+}
+.intro_left_section {
+  width: 40%;
+  height: 100%;
+  /* background-color: blue; */
+}
+.intro_right_section {
+  height: 100%;
+  width: 60%;
+  /* background-color: red; */
+}
+.welcome_text {
+  font-size: 40px;
+  width: 300px;
+  font-weight: bold;
+}
+.intro_root .content p {
+  font-size: 16px;
+  text-align: justify;
+}

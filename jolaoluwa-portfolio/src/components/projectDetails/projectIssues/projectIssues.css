@@ -1,0 +1,27 @@
+.projectIssues_root {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+.projectIssues_root .left,
+.projectIssues_root .right {
+  width: 50%;
+  padding: 20px;
+}
+.projectIssues_root .left {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.projectIssues_root li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+.projectIssues_root p {
+  margin-top: 10px;
+}
+.projectIssues_root h3 {
+  font-weight: bold;
+}
