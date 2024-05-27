@@ -36,9 +36,9 @@ export default function ProjectDetails() {
                 {project.platform} — {project.timeFinished}
               </h3>
             </div>
-            <div className={styles.project_pic_overview}>
+            {/* <div className={styles.project_pic_overview}>
               <ProjectPicOverview data={project} />
-            </div>
+            </div> */}
             <div className={styles.project_overview}>
               <Overview data={project} />
             </div>
