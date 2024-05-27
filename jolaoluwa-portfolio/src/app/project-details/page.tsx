@@ -9,6 +9,7 @@ import ProjectHighlights from "@/components/projectDetails/projectHighlights/Pro
 import ProjectIssues from "@/components/projectDetails/projectIssues/ProjectIssues";
 import { ProjectsDetailsData } from "../../../utils/ProjectsDetailsData";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export default function ProjectDetails() {
   const searchParams = useSearchParams();
@@ -18,39 +19,41 @@ export default function ProjectDetails() {
   const project = ProjectsDetailsData.find((project) => project.name === name);
 
   return (
-    <div className={styles.project_details_root}>
-      <div className={styles.project_details_backBtn}>
-        <Link href="/">
-          <button className={styles.backBtn}>
-            <MdKeyboardBackspace />
-            <p>Back</p>
-          </button>
-        </Link>
-      </div>
-      <div className={styles.project_content}>
-        {project && (
-          <div key={project.id}>
-            <div className={styles.project_name}>
-              <h1>{project.name}</h1>
-              <h3>
-                {project.platform} — {project.timeFinished}
-              </h3>
-            </div>
-            {/* <div className={styles.project_pic_overview}>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className={styles.project_details_root}>
+        <div className={styles.project_details_backBtn}>
+          <Link href="/">
+            <button className={styles.backBtn}>
+              <MdKeyboardBackspace />
+              <p>Back</p>
+            </button>
+          </Link>
+        </div>
+        <div className={styles.project_content}>
+          {project && (
+            <div key={project.id}>
+              <div className={styles.project_name}>
+                <h1>{project.name}</h1>
+                <h3>
+                  {project.platform} — {project.timeFinished}
+                </h3>
+              </div>
+              {/* <div className={styles.project_pic_overview}>
               <ProjectPicOverview data={project} />
             </div> */}
-            <div className={styles.project_overview}>
-              <Overview data={project} />
+              <div className={styles.project_overview}>
+                <Overview data={project} />
+              </div>
+              <div className={styles.project_highlights}>
+                <ProjectHighlights data={project} />
+              </div>
+              <div className={styles.project_issues}>
+                <ProjectIssues data={project} />
+              </div>
             </div>
-            <div className={styles.project_highlights}>
-              <ProjectHighlights data={project} />
-            </div>
-            <div className={styles.project_issues}>
-              <ProjectIssues data={project} />
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
